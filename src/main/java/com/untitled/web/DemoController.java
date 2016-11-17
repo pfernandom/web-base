@@ -24,5 +24,16 @@ public class DemoController {
 		
 		return "Hello World!"+repo.count();
 	}
+	
+	@RequestMapping("/admin")
+	@ResponseBody
+	String admin() {
+		Person p = new Person();
+		p.setName("Pedro");
+		repo.count();
+		repo.save(p);
+		
+		return "Hello World!"+repo.count();
+	}
 
 }
