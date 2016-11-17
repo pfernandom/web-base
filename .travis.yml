@@ -1,0 +1,11 @@
+language: java
+jdk:
+- oraclejdk7
+- oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: XdKJSkscBjqlqC3GzXBp/uz6y5/TOBRx3xKSNqVBwKXlHOZ/UBB6AyBRJ7lqM24TIBUJvoNrZAXjZijEjvFnM86HDFjimbuiSx4cEXyrRxe7DyZwIdN1v9u3f6ZfU4eZKtMz3kgL18zyia+ubBelPjIybqkxCXee0Bw2vDeCAW3E/6NFBwhnABGzheuP7XQ6SFDwq2S5MxdSpEWcGF3E5M9/vxPbj3svXWUPlJ+8cDyASxhtHMz7r9temb3kP7XMpwA793SQeiblMN57bwsPtQMglo+J0RsN+mIAMtl+aT6+LHhJdCk0Zv23YztbAZ2qp0pg5idqalxkWxVRvimaJxhNrexjcHLdngrTH8XfspZ89ScWibBYv9HKwjvOo/cydpS0oTFlKC4UHIm3cZxhPAYpSBXmN7dyqgTS9hwVhtg/sYHRt1/0XRZmCFWUp25Og4+ZshA+qoLeO3V3pUrBhmv0DEzG7f0ovwsmZZQwALppWpV0BU20ox0n/Zx4sbdyG4hFq5wblCSwY9oljiJmBrSCdwG+bGbdCzyGaEOnoa9Q8qUkpwkJntISEJ9QoSLlDYFGGtgE4w2iTzmm14ddVD5K8pTJmUQrSKHYDdTTKspLL+X7wPk/XkyZHetVmCZ7x7oD/Pb9h+Dl+FBF/Dn99tfrRgJ3ks+KHJigOpc9dnU=
+  app: web-base
+  on:
+    repo: pfernandom/web-base
