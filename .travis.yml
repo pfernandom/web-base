@@ -1,6 +1,8 @@
 language: java
 jdk:
 - oraclejdk8
+before_deploy:
+  - "mvn install -f /utils/pom.xml"
 deploy:
   provider: heroku
   api_key:
