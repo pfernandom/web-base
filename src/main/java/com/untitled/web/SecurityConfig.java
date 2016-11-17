@@ -25,9 +25,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/css/**", "/index").permitAll().antMatchers("/admin**").hasRole("ADMIN")
+		http.authorizeRequests()
+			.antMatchers("/css/**", "/index").permitAll()
+			.antMatchers("/user**").hasRole("USER")
+			.antMatchers("/admin**").hasRole("ADMIN")
 				.and().formLogin()
-				.and().logout().logoutSuccessUrl("/login?logout");
+				.and().logout();
 	}
 
 	@Autowired
@@ -39,4 +42,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public PasswordEncoder passwordencoder(){
 		return new BCryptPasswordEncoder();
 	}
+	
 }
