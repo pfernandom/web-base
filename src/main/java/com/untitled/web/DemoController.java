@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.untitled.entity.Person;
-import com.untitled.repo.PersonRepository;
+import com.untitled.data.entity.Person;
+import com.untitled.data.repo.PersonRepository;
 
 @Controller
 public class DemoController {
