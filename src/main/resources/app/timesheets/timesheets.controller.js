@@ -4,7 +4,6 @@ export default class TimesheetsController {
     
     $http.get('/api/timesheets')
     	.then(resp=>{
-    		console.log(resp);
     		ctrl.timesheets = resp.data._embedded.timesheets;
     	})
     	.catch(err=>{

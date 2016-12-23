@@ -12,9 +12,6 @@ class Access {
 		$element.hide();
 		$scope.$on('userLoaded', (e, user) => { 
 			for(var i in user.authorities){
-				console.log(user.authorities[i]);
-				console.log($attrs.access);
-				console.log(user.authorities[i].authority == $attrs.access)
 				if(user.authorities[i].authority == $attrs.access){
 					$element.show();
 				}

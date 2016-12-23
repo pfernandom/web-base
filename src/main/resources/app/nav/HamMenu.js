@@ -7,10 +7,10 @@ const HamMenu = {
     template:Hamburger,
     controller: function () {
     	this.constructor = () => {
-    		console.log("Constructor");
+    		//console.log("Constructor");
     	}
     	 this.$onInit = () => {
-    		 console.log("iniit");
+    		 //console.log("iniit");
 	    };
     }
 };
