@@ -10,6 +10,7 @@ const HamMenu = {
     		console.log("Constructor");
     	}
     	 this.$onInit = () => {
+    		 console.log("iniit");
 	    };
     }
 };

@@ -22,51 +22,72 @@
   </div>
 </div>
 
-<div class="form-group row" ng-class="{ 'has-error' : form.street1.$invalid && form.street1.$touched }">
-  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Street 1*</label>
+<div class="form-group row" ng-class="{ 'has-error' : form.businessModel.$invalid && form.businessModel.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Business Model*</label>
   <div class="col-xs-12 col-md-10">
-    <input ng-model="ctrl.newClient.address.street1" class="form-control" type="text" placeholder="Street 1" id="example-text-input" 
-	    name="street1"
-	    required>
-	<div ng-messages="form.street1.$error" ng-if="form.street1.$touched" role="alert" class="help-block">
-		<p ng-message="required">The field Street 1 is required</p>
-	</div>
-  </div>
-</div>
-
-
-<div class="form-group row" ng-class="{ 'has-error' : form.street2.$invalid && form.street2.$touched }">
-  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Street 1*</label>
-  <div class="col-xs-12 col-md-10">
-    <input ng-model="ctrl.newClient.address.street2" class="form-control" type="text" placeholder="Street 2" id="example-text-input" 
-	    name="street2">
-  </div>
-</div>
-
-<div class="form-group row" ng-class="{ 'has-error' : form.zip.$invalid && form.zip.$touched }">
-  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">ZIP*</label>
-  <div class="col-xs-12 col-md-10">
-    <input ng-model="ctrl.newClient.address.zip" class="form-control" type="text" placeholder="ZIP" id="example-text-input" 
-	    name="zip"
-	    required>
-	<div ng-messages="form.zip.$error" ng-if="form.zip.$touched" role="alert" class="help-block">
-		<p ng-message="required">The field ZIP is required</p>
-	</div>
-  </div>
-</div>
-
-
-<div class="form-group row" ng-class="{ 'has-error' : form.state.$invalid && form.state.$touched }">
-  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">State*</label>
-  <div class="col-xs-12 col-md-10">
-    <select ng-model="ctrl.newClient.address.state" class="form-control" placeholder="States" id="example-text-input" 
-    	ng-options="state._links.self.href as state.name for state in ctrl.states"
-	    name="state">
-	<div ng-messages="form.state.$error" ng-if="form.state.$touched" role="alert" class="help-block">
+    <select ng-model="ctrl.newClient.businessModel" class="form-control" placeholder="Business Model" id="example-text-input" 
+	    name="businessModel">
+	    <option value="FEES" label="Fees"/>
+	    <option value="RETAINER" label="Retainer"/>
+	</select>
+	<div ng-messages="form.businessModel.$error" ng-if="form.businessModel.$touched" role="alert" class="help-block">
 		<p ng-message="required">The field state is required</p>
 	</div>
   </div>
 </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Address</div>
+  <div class="panel-body">
+    <div class="form-group row" ng-class="{ 'has-error' : form.street1.$invalid && form.street1.$touched }">
+	  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Street 1*</label>
+	  <div class="col-xs-12 col-md-10">
+	    <input ng-model="ctrl.newClient.address.street1" class="form-control" type="text" placeholder="Street 1" id="example-text-input" 
+		    name="street1"
+		    required>
+		<div ng-messages="form.street1.$error" ng-if="form.street1.$touched" role="alert" class="help-block">
+			<p ng-message="required">The field Street 1 is required</p>
+		</div>
+	  </div>
+	</div>
+	
+	
+	<div class="form-group row" ng-class="{ 'has-error' : form.street2.$invalid && form.street2.$touched }">
+	  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Street 2*</label>
+	  <div class="col-xs-12 col-md-10">
+	    <input ng-model="ctrl.newClient.address.street2" class="form-control" type="text" placeholder="Street 2" id="example-text-input" 
+		    name="street2">
+	  </div>
+	</div>
+	
+	<div class="form-group row" ng-class="{ 'has-error' : form.zip.$invalid && form.zip.$touched }">
+	  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">ZIP*</label>
+	  <div class="col-xs-12 col-md-10">
+	    <input ng-model="ctrl.newClient.address.zip" class="form-control" type="text" placeholder="ZIP" id="example-text-input" 
+		    name="zip"
+		    required>
+		<div ng-messages="form.zip.$error" ng-if="form.zip.$touched" role="alert" class="help-block">
+			<p ng-message="required">The field ZIP is required</p>
+		</div>
+	  </div>
+	</div>
+	
+	
+	<div class="form-group row" ng-class="{ 'has-error' : form.state.$invalid && form.state.$touched }">
+	  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">State*</label>
+	  <div class="col-xs-12 col-md-10">
+	    <select ng-model="ctrl.newClient.address.state" class="form-control" placeholder="States" id="example-text-input" 
+	    	ng-options="state._links.self.href as state.name for state in ctrl.states"
+		    name="state">
+		<div ng-messages="form.state.$error" ng-if="form.state.$touched" role="alert" class="help-block">
+			<p ng-message="required">The field state is required</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
 
 <div class="form-group row">
    <div class="offset-sm-2 col-sm-10">

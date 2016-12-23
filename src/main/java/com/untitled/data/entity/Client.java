@@ -17,6 +17,7 @@ public class Client {
 	private Long id;
 	private String name;
 	private String alias;
+	private BusinessModel businessModel;
 	
 	/*
 	@OneToOne(cascade = CascadeType.PERSIST)
@@ -57,6 +58,14 @@ public class Client {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public BusinessModel getBusinessModel() {
+		return businessModel;
+	}
+
+	public void setBusinessModel(BusinessModel businessModel) {
+		this.businessModel = businessModel;
 	}
 	
 	
