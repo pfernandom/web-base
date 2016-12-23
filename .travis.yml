@@ -2,7 +2,7 @@ language: java
 jdk:
 - oraclejdk8
 before_install:
-- rm -fr /home/travis/.npm/
+- rm -fr /home/travis/.npm/4d269758-is-npm-lodash-4-17-2-package-tgz.lock
 cache:
   directories:
   - .autoconf
