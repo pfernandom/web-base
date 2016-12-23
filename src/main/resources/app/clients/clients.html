@@ -1,0 +1,17 @@
+<h2>Clients</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Alias</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="client in ctrl.clients">
+			<td>{{client.name}}</td>
+			<td>{{client.alias}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<a ui-sref="newClient">New Client</a>

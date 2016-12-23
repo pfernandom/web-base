@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    	<base href="/">
+        <meta charset="utf-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css"/>
+   		<link rel="stylesheet" href="static/bootstrap/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="static/main.css"/>
+    </head>
+    <body ng-controller="Main as ctrl" ng-cloak>
+    	<nav class = "navbar navbar-default" role = "navigation">
+		   <div class = "navbar-header">
+		      <ham-menu></ham-menu>
+				
+		      <a class="navbar-brand" ui-sref="home">Home</a>
+		   </div>
+		   
+		   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
+			
+		      <ul class = "nav navbar-nav">
+		      	 <li  ui-sref-active="active"><a ui-sref="timesheets">Timesheets</a></li>
+		      	 <li  ui-sref-active="active"><a ui-sref="cases">Cases</a></li>
+		      	 <li  ui-sref-active="active"><a ui-sref="clients">Clients</a></li>
+		         <li  ui-sref-active="active"><a ui-sref="about">About</a></li>
+					<!-- 
+		         <li class = "dropdown">
+		            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
+		               Java 
+		               <b class = "caret"></b>
+		            </a>
+		            
+		            <ul class = "dropdown-menu">
+		               <li><a href = "#">jmeter</a></li>
+		               <li><a href = "#">EJB</a></li>
+		               <li><a href = "#">Jasper Report</a></li>
+		               
+		               <li class = "divider"></li>
+		               <li><a href = "#">Separated link</a></li>
+		               
+		               <li class = "divider"></li>
+		               <li><a href = "#">One more separated link</a></li>
+		            </ul>
+		            
+		         </li>
+					 -->
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+			      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+			    </ul>
+		   </div>
+		   
+		</nav>
+    
+    	<div class="container">
+		  <div class="row">
+		    <div class="col-sm-12">
+      		  <ui-view></ui-view>
+		    </div>
+		  </div>
+		</div>
+    
+    	<script src="/static/jquery-3.1.1.min.js"></script>
+    	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/webjars/vendor.bundle.js"></script>
+        <script src="/webjars/main.js"></script>
+        
+        
+    </body>
+</html>

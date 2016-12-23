@@ -1,0 +1,21 @@
+<h2>Timesheets</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Date</td>
+			<td>Time (in hours)</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="timesheet in ctrl.timesheets">
+			<td>{{timesheet.name}}</td>
+			<td>{{timesheet.creationDate | date}}</td>
+			<td>{{timesheet.time}}</td>
+			<td>{{timesheet.description}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<a ui-sref="newTimesheet">New Timesheet</a>

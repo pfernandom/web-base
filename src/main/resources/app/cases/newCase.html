@@ -1,0 +1,37 @@
+<h2>New Case</h2>
+<form name="newCase" ng-submit="ctrl.create()">
+
+<div class="form-group row" ng-class="{ 'has-error' : newCase.title.$invalid && newCase.title.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Title*</label>
+  <div class="col-xs-12 col-md-10">
+    <input ng-model="ctrl.newCase.title" class="form-control" type="text" placeholder="Title" id="example-text-input" 
+	    name="title"
+	    required>
+	<div ng-messages="newCase.title.$error" ng-if="newCase.title.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field title is required</p>
+	</div>
+	
+  </div>
+  
+</div>
+
+<div class="form-group row" ng-class="{ 'has-error' : newCase.description.$invalid && newCase.title.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Description*</label>
+  <div class="col-xs-12 col-md-10">
+    <textarea ng-model="ctrl.newCase.description" class="form-control" type="text" placeholder="Description" id="example-text-input"
+	     name="description"
+	     required></textarea>
+	<div ng-messages="newCase.title.$error" ng-if="newCase.description.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field description is required</p>
+	</div>
+  </div>
+</div>
+
+<div class="form-group row">
+   <div class="offset-sm-2 col-sm-10">
+   	 <button ui-sref="cases" class="btn btn-primary">Back</button>
+     <button type="submit" class="btn btn-primary" ng-disabled="newCase.$invalid">Create</button>
+   </div>
+ </div>
+ 
+ </form>

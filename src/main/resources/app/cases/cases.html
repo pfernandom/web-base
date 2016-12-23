@@ -1,0 +1,17 @@
+<h2>Cases</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="case in ctrl.cases">
+			<td>{{case.title}}</td>
+			<td>{{case.description}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<a ui-sref="newCase">New Case</a>

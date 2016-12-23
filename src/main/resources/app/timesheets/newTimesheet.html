@@ -1,0 +1,74 @@
+<h2>New Timesheet</h2>
+<form name="form" ng-submit="ctrl.create()">
+
+<div class="form-group row" ng-class="{ 'has-error' : form.name.$invalid && form.name.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Name*</label>
+  <div class="col-xs-12 col-md-10">
+    <input ng-model="ctrl.newTimesheet.name" class="form-control" type="text" placeholder="Name" id="example-text-input" 
+	    name="name" required>
+	<div ng-messages="form.name.$error" ng-if="form.name.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field title is required</p>
+	</div>
+  </div>
+</div>
+
+<div class="form-group row" ng-class="{ 'has-error' : form.case.$invalid && form.case.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Case</label>
+  <div class="col-xs-12 col-md-10">
+    <select ng-model="ctrl.newTimesheet.reportedCase" class="form-control" placeholder="Case" id="example-text-input" 
+    	ng-options="case._links.self.href as case.title for case in ctrl.cases"
+	    name="case"
+	    required>
+	<div ng-messages="form.case.$error" ng-if="form.case.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field Case is required</p>
+	</div>
+  </div>
+</div>
+
+
+<div class="form-group row" ng-class="{ 'has-error' : form.client.$invalid && form.client.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Client</label>
+  <div class="col-xs-12 col-md-10">
+    <select ng-model="ctrl.newTimesheet.client" class="form-control" placeholder="Client*" id="example-text-input" 
+    	ng-options="client._links.self.href as client.name for client in ctrl.clients"
+    	required
+	    name="client">
+	<div ng-messages="form.client.$error" ng-if="form.client.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field Client is required</p>
+	</div>
+  </div>
+</div>
+
+
+<div class="form-group row" ng-class="{ 'has-error' : form.time.$invalid && form.time.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Time (in hours)*</label>
+  <div class="col-xs-12 col-md-10">
+    <input ng-model="ctrl.newTimesheet.time" class="form-control" type="number" placeholder="Time" id="example-text-input" 
+	    name="time" required step="0.01">
+	<div ng-messages="form.time.$error" ng-if="form.time.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field time is required</p>
+		<p ng-message="$valid">The field time is not valid. Use a number</p>
+	</div>
+  </div>
+</div>
+
+<div class="form-group row" ng-class="{ 'has-error' : form.description.$invalid && form.title.$touched }">
+  <label for="example-text-input" class="col-xs-12 col-md-2 col-form-label">Description*</label>
+  <div class="col-xs-12 col-md-10">
+    <textarea ng-model="ctrl.newTimesheet.description" class="form-control" type="text" placeholder="Description" id="example-text-input"
+	     name="description"
+	     required></textarea>
+	<div ng-messages="form.description.$error" ng-if="form.description.$touched" role="alert" class="help-block">
+		<p ng-message="required">The field description is required</p>
+	</div>
+  </div>
+</div>
+
+<div class="form-group row">
+   <div class="offset-sm-2 col-sm-10">
+   	 <button ui-sref="timesheets" class="btn btn-primary">Back</button>
+     <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Create</button>
+   </div>
+ </div>
+ 
+ </form>

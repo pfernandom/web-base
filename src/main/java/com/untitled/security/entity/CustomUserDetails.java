@@ -49,5 +49,5 @@ public class CustomUserDetails extends User implements UserDetails {
 	public String getUsername() {
 		return super.getUserName();
 	}
-
+	
 }
