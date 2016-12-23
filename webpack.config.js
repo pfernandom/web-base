@@ -18,7 +18,7 @@ var configuration = {
 		vendor: ['angular'],
 	},
 	output: {
-		path: PATHS.build,
+		path: './src/main/resources/static/dist',
 		filename: '[name].js',
 	},
 	devServer: {
