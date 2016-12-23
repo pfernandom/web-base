@@ -1,9 +1,6 @@
 language: java
 jdk:
 - oraclejdk8
-before_install:
-- npm install
-- npm run build
 cache:
   directories:
   - .autoconf
